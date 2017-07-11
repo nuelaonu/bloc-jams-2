@@ -9,8 +9,11 @@ var pointsArray = document.getElementsByClassName('point');
      points[index].style.WebkitTransform = "scaleX(1) translateY(0)";
 
    }
-   for(var i=0, i<point.length, i++){
-     revealPoint(i);
+   function forEach (array, callback){
+     for(var i = 0; i < array.length; i++){
+       callback(array[i]);
+     }
+   }
    };
    window.onload = function() {
      // Automatically animate the points on a tall screen where scrolling can't trigger the animation
