@@ -30,6 +30,20 @@
      ]
  };
 
+ var albumPSquare = {
+     title: 'Testimony',
+     artist: 'Peter Smith',
+     label: 'SOP',
+     year: '1999',
+     albumArtUrl: 'assets/images/album_covers/01.png',
+     songs: [
+         { title: 'Yellow', duration: '3:26' },
+         { title: 'Orange', duration: '3:00' },
+         { title: 'Green', duration: '4:01' },
+         { title: 'Blue', duration: '4:21'},
+         { title: 'Brown', duration: '3:15'}
+     ]
+ };
  var createSongRow = function(songNumber, songName, songLength) {
      var template =
         '<tr class="album-view-song-item">'
@@ -67,3 +81,8 @@
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
  };
+ var printMessage = function() {
+    console.log("playing!");
+};
+
+document.getElementById('playme').addEventListener('play', printMessage);
