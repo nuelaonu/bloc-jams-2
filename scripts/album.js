@@ -86,9 +86,10 @@
          }
          if(element.parentElement.length > 0) {
            console.log("No parent found");
-           else{
-             console.log("No parent found with that class name");
-           }
+
+         }
+         else{
+           console.log("No parent found with that class name");
          }
          return currentParent;
      }
