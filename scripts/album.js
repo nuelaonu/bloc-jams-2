@@ -146,7 +146,7 @@ var setSong = function(songNumber){
      setCurrentAlbum(albumPicasso);
      $previousButton.click(previousSong);
      $nextButton.click(nextSong);
-     $play-PauseButton.click(playPause);
+     $play-PauseButton.click(play-Pause);
 
 
  });
