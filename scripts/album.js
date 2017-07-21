@@ -141,11 +141,21 @@ var setSong = function(songNumber){
 
   var $previousButton = $('.main-controls .previous');
   var $nextButton = $('.main-controls .next');
+  var $play-PauseButton = $('.main-controls .play-Pause');
   $(document).ready(function() {
      setCurrentAlbum(albumPicasso);
      $previousButton.click(previousSong);
      $nextButton.click(nextSong);
+     $play-PauseButton.click(playPause);
 
+
+ });
+ $('togglePlayFromPlayerBar').click(function(){
+   if (this.paused) {
+       this.play();
+   } else {
+       this.pause();
+   }
  });
  var nextSong = function() {
     var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);
@@ -174,7 +184,10 @@ var setSong = function(songNumber){
     $lastSongNumberCell.html(lastSongNumber);
 };
 var previousSong = function() {
+
     var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);
+    console.log("currentAlbum", currentAlbum);
+    console.log(currentSongFromAlbum);
     // Note that we're _decrementing_ the index here
     currentSongIndex--;
 
