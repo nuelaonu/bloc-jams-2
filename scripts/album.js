@@ -133,8 +133,15 @@ var setSong = function(songNumber){
 
              updateSeekPercentage($seekBar, seekBarFillRatio);
          });
+
+         var setCurrentTimeInPlayerBar = function(currentTime){
+     $('.current-time').text(currentTime);
+ };
+
+
      }
  };
+
 
  var updateSeekPercentage = function($seekBar, seekBarFillRatio) {
     var offsetXPercent = seekBarFillRatio * 100;
@@ -150,7 +157,7 @@ var setSong = function(songNumber){
  var setupSeekBars = function() {
       var $seekBars = $('.player-bar .seek-bar');
 
-    
+
           $seekBars.click(function(event) {
        var offsetX = event.pageX - $(this).offset().left;
        var barWidth = $(this).width();
@@ -216,6 +223,9 @@ var setSong = function(songNumber){
     $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.artist);
 
     $('.main-controls .play-pause').html(playerBarPauseButton);
+    var setTotalTimeInPlayerBar(totalTime) {
+      $('.total-time').text(length);
+    };
 };
 
  var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
@@ -293,3 +303,6 @@ var previousSong = function() {
     $previousSongNumberCell.html(pauseButtonTemplate);
     $lastSongNumberCell.html(lastSongNumber);
 };
+var filterTimeCode = function(timeInSeconds){
+  parseFloat()
+}
